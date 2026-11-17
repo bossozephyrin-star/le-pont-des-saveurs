@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Le Pont des Saveurs — Restaurant fictif à Brazzaville</title>
+    <meta name="description" content="Découvrez Le Pont des Saveurs, restaurant fictif à Brazzaville : cuisines du Sénégal, de Côte d’Ivoire et du Congo. Site de démonstration.">
+    <link rel="canonical" href="https://bossozephyrin-star.github.io/le-pont-des-saveurs/">
+    <meta property="og:title" content="Le Pont des Saveurs — Restaurant fictif à Brazzaville">
+    <meta property="og:description" content="Découvrez Le Pont des Saveurs, restaurant fictif à Brazzaville : cuisines du Sénégal, de Côte d’Ivoire et du Congo. Site de démonstration.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bossozephyrin-star.github.io/le-pont-des-saveurs/">
+    <meta property="og:image" content="https://bossozephyrin-star.github.io/le-pont-des-saveurs/assets/og-image.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Photo d’ambiance illustrative : table dressée, bougies et plantes dans une salle de restaurant.">
+    <meta property="og:locale" content="fr_CG">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <!-- Police préparée pour l’étape CSS ; elle n’est pas encore appliquée. -->
+    <link rel="preload" href="fonts/lora-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Le Pont des Saveurs",
+        "description": "Site de démonstration : restaurant fictif à Brazzaville, imaginé pour réunir les cuisines du Sénégal, de Côte d’Ivoire et du Congo.",
+        "servesCuisine": ["Sénégalaise", "Ivoirienne", "Congolaise"],
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12, rue des Saveurs (adresse fictive)",
+            "addressLocality": "Brazzaville",
+            "addressCountry": "CG"
+        },
+        "telephone": "+242000000000",
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                "opens": "12:00",
+                "closes": "22:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Sunday",
+                "opens": "12:00",
+                "closes": "16:00"
+            }
+        ],
+        "image": "https://bossozephyrin-star.github.io/le-pont-des-saveurs/assets/ambiance.webp",
+        "url": "https://bossozephyrin-star.github.io/le-pont-des-saveurs/"
+    }
+    </script>
+</head>
+<body>
+    <a href="#contenu">Aller au contenu</a>
+
+    <header>
+        <p><a href="#accueil">Le Pont des Saveurs</a></p>
+        <p>Site de démonstration : restaurant fictif.</p>
+        <!-- Le menu reste visible. Ce bouton sera activé à l’étape JavaScript, après le CSS. -->
+        <button type="button" aria-label="Ouvrir le menu de navigation"
+                aria-expanded="false" aria-controls="navigation-principale" disabled>Menu</button>
+        <nav id="navigation-principale" aria-label="Navigation principale">
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#carte">La carte</a></li>
+                <li><a href="#a-propos">À propos</a></li>
+                <li><a href="#infos-pratiques">Infos pratiques</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenu" tabindex="-1">
+        <section id="accueil" aria-labelledby="titre-accueil">
+            <h1 id="titre-accueil">Le Pont des Saveurs</h1>
+            <p>Yassa, thieboudienne, attiéké : l’Afrique de l’Ouest dans votre assiette.</p>
+            <p>Une table imaginaire à Brazzaville, entre cuisines sénégalaise, ivoirienne et congolaise.</p>
+            <p><a href="https://wa.me/242000000000" aria-describedby="contact-demo">Réserver sur WhatsApp — démonstration</a></p>
+            <p id="contact-demo">Aucune réservation réelle : les liens d’appel et WhatsApp utilisent le numéro fictif +242 00 000 0000.</p>
+            <figure>
+                <img src="assets/ambiance.webp" width="240" height="160"
+                     alt="Table dressée à la lueur des bougies, entourée de plantes dans une salle de restaurant."
+                     fetchpriority="high">
+                <figcaption>Photo d’ambiance illustrative ; elle ne représente pas Le Pont des Saveurs, qui est fictif.</figcaption>
+            </figure>
+        </section>
+
+        <section id="carte" aria-labelledby="titre-carte">
+            <h2 id="titre-carte">La carte</h2>
+            <p>Trois pays, neuf idées de plats à partager. Les descriptions et les prix en FCFA sont fictifs, pour cette démonstration.</p>
+
+            <h3 id="carte-senegal">Sénégal</h3>
+            <ul aria-labelledby="carte-senegal">
+                <li>
+                    <h4>Yassa poulet</h4>
+                    <p>Poulet mariné au citron, oignons fondants et riz blanc.</p>
+                    <p>Prix fictif : <data value="4500">4 500 FCFA</data></p>
+                </li>
+                <li>
+                    <h4>Thieboudienne</h4>
+                    <p>Riz à la tomate, poisson et légumes mijotés.</p>
+                    <p>Prix fictif : <data value="5500">5 500 FCFA</data></p>
+                </li>
+                <li>
+                    <h4>Mafé</h4>
+                    <p>Bœuf mijoté dans une sauce à l’arachide, servi avec du riz.</p>
+                    <p>Prix fictif : <data value="5000">5 000 FCFA</data></p>
+                </li>
+            </ul>
+
+            <h3 id="carte-cote-ivoire">Côte d’Ivoire</h3>
+            <ul aria-labelledby="carte-cote-ivoire">
+                <li>
+                    <h4>Attiéké poisson braisé</h4>
+                    <p>Semoule de manioc, poisson braisé et garniture de tomates et d’oignons.</p>
+                    <p>Prix fictif : <data value="5000">5 000 FCFA</data></p>
+                </li>
+                <li>
+                    <h4>Kédjenou de poulet</h4>
+                    <p>Poulet mijoté à l’étouffée avec tomates, aubergines et épices.</p>
+                    <p>Prix fictif : <data value="4500">4 500 FCFA</data></p>
+                </li>
+                <li>
+                    <h4>Alloco</h4>
+                    <p>Bananes plantains mûres frites, accompagnées d’une sauce tomate pimentée.</p>
+                    <p>Prix fictif : <data value="2000">2 000 FCFA</data></p>
+                </li>
+            </ul>
+
+            <h3 id="carte-congo">Congo</h3>
+            <ul aria-labelledby="carte-congo">
+                <li>
+                    <h4>Poulet moambé</h4>
+                    <p>Poulet mijoté dans une sauce à la pulpe de noix de palme, servi avec du riz.</p>
+                    <p>Prix fictif : <data value="5000">5 000 FCFA</data></p>
+                </li>
+                <li>
+                    <h4>Saka-saka</h4>
+                    <p>Feuilles de manioc pilées et mijotées, accompagnées de chikwangue.</p>
+                    <p>Prix fictif : <data value="3500">3 500 FCFA</data></p>
+                </li>
+                <li>
+                    <h4>Liboke de poisson</h4>
+                    <p>Poisson aux aromates cuit en papillote de feuilles, servi avec du manioc.</p>
+                    <p>Prix fictif : <data value="5500">5 500 FCFA</data></p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="a-propos" aria-labelledby="titre-a-propos">
+            <h2 id="titre-a-propos">À propos</h2>
+            <p>Site de démonstration : restaurant fictif à Brazzaville, imaginé pour réunir les cuisines du Sénégal, de Côte d’Ivoire et du Congo.</p>
+            <p>Le « pont » symbolise la rencontre de ces trois traditions culinaires autour d’une même table.</p>
+            <p>Ce projet de portfolio est créé par Adriano Bosso, étudiant en Systèmes d’Information et Génie Logiciel, pour présenter son travail de création de sites web pour restaurants.</p>
+            <p>Le restaurant, sa carte, ses prix, son adresse, son numéro de téléphone et ses horaires sont inventés : ce site ne représente aucun établissement en activité.</p>
+        </section>
+
+        <section id="infos-pratiques" aria-labelledby="titre-infos-pratiques">
+            <h2 id="titre-infos-pratiques">Infos pratiques</h2>
+            <h3>Adresse fictive</h3>
+            <address>
+                Le Pont des Saveurs<br>
+                12, rue des Saveurs (adresse fictive)<br>
+                Brazzaville, République du Congo
+            </address>
+            <h3>Horaires fictifs</h3>
+            <table>
+                <caption>Exemple d’horaires — heure locale de Brazzaville</caption>
+                <thead>
+                    <tr><th scope="col">Jour</th><th scope="col">Horaires</th></tr>
+                </thead>
+                <tbody>
+                    <tr><th scope="row">Lundi</th><td>Fermé</td></tr>
+                    <tr><th scope="row">Mardi</th><td><time datetime="12:00">12 h</time> – <time datetime="22:00">22 h</time></td></tr>
+                    <tr><th scope="row">Mercredi</th><td><time datetime="12:00">12 h</time> – <time datetime="22:00">22 h</time></td></tr>
+                    <tr><th scope="row">Jeudi</th><td><time datetime="12:00">12 h</time> – <time datetime="22:00">22 h</time></td></tr>
+                    <tr><th scope="row">Vendredi</th><td><time datetime="12:00">12 h</time> – <time datetime="22:00">22 h</time></td></tr>
+                    <tr><th scope="row">Samedi</th><td><time datetime="12:00">12 h</time> – <time datetime="22:00">22 h</time></td></tr>
+                    <tr><th scope="row">Dimanche</th><td><time datetime="12:00">12 h</time> – <time datetime="16:00">16 h</time></td></tr>
+                </tbody>
+            </table>
+            <h3>Le quartier, à titre indicatif</h3>
+            <p id="carte-indicative">Emplacement indicatif : quartier du Plateau, au centre de Brazzaville. La carte ne localise pas un restaurant réel.</p>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15914.682661188!2d15.253349492505283!3d-4.284044781037515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a32550cb53b3b%3A0x618a7f79b54631cf!2sPLATEAU%2C%20Brazzaville!5e0!3m2!1sfr!2scg!4v1794940338701!5m2!1sfr!2scg"
+                title="Carte du quartier du Plateau à Brazzaville — emplacement indicatif"
+                aria-describedby="carte-indicative" width="280" height="240"
+                loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Plateau%2C%20Brazzaville">Voir le quartier du Plateau sur Google Maps</a></p>
+        </section>
+
+        <section id="contact" aria-labelledby="titre-contact">
+            <h2 id="titre-contact">Contact</h2>
+            <p id="numero-demo">Numéro fictif de démonstration : +242 00 000 0000. Ne pas appeler ni envoyer de message ; aucune réservation n’est traitée.</p>
+            <ul>
+                <li><a href="tel:+242000000000" aria-describedby="numero-demo">Appeler Le Pont des Saveurs — numéro fictif</a></li>
+                <li><a href="https://wa.me/242000000000" aria-describedby="numero-demo">Contacter Le Pont des Saveurs sur WhatsApp — démonstration</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>Site de démonstration : restaurant fictif.</strong></p>
+        <p>Projet de portfolio d’Adriano Bosso, étudiant en Systèmes d’Information et Génie Logiciel.</p>
+        <p>Crédits photo : <a href="https://www.pexels.com/photo/interior-of-restaurant-with-served-table-4577715/">Rachel Claire sur Pexels</a> — photo d’ambiance recadrée et convertie en WebP, également utilisée pour l’aperçu de partage.</p>
+        <p>Police préparée : Lora, sous licence SIL Open Font License, hébergée localement et réservée à la future étape CSS.</p>
+        <p><a href="#accueil">Retour à l’accueil</a></p>
+    </footer>
+</body>
+</html>
+

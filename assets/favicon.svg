@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>Le Pont des Saveurs</title>
+  <rect width="64" height="64" rx="12" fill="#183e32"/>
+  <path d="M10 44V32C22 12 42 12 54 32V44M10 32H54M21 24V44M32 20V44M43 24V44M8 48H56" fill="none" stroke="#fff4df" stroke-width="4"/>
+</svg>
