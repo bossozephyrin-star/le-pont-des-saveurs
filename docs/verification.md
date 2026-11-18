@@ -1,5 +1,19 @@
 # Vérifications — étape HTML sans CSS
 
+## Corrections du 18 novembre 2026
+
+- Numéro volontairement invalide `+000000000000` identique dans le texte, le lien `tel:` et le JSON-LD. Les deux liens WhatsApp utilisent les mêmes chiffres, sans le `+` : `000000000000`.
+- Mentions de démonstration regroupées dans l’en-tête et le footer ; prix affichés sans neuf répétitions de « Prix fictif ». Note de chantier sur la police retirée du footer, informations conservées dans le README.
+- Dimensions lues dans les fichiers : ambiance 1200 × 800 (68 570 octets), Open Graph 1200 × 630 (52 588 octets). Les attributs HTML 240 × 160 conservent exactement le ratio 3:2. Leur petite taille d’affichage est volontaire en attendant le CSS.
+- Les quatre ressources demandées répondent HTTP 200 avec le type attendu : WebP, WebP, SVG, WOFF2.
+- Crédit Rachel Claire / Pexels 4577715 vérifié sur la fiche de la photo ; source téléchargée à nouveau et empreinte SHA-256 comparée. Le recadrage du hero reproduit exactement le fichier utilisé.
+- `og:locale` changé en `fr_FR`, exemple de la documentation officielle Open Graph. La liste complète des locales Meta n’a pas pu être consultée ; aucune affirmation de rejet systématique de `fr_CG` n’est faite.
+- Nouvelle validation W3C : aucune erreur ni avertissement ; `validation-w3c.json` contient ce dernier résultat.
+- Aucun CSS ni JavaScript de menu ajouté. Le JSON-LD reste une illustration pédagogique, sans attente de résultat enrichi pour un établissement fictif.
+- Iframe Google Maps conservée avec `loading="lazy"`. Son impact reste à mesurer avec Lighthouse ; si nécessaire, prévoir une image statique du quartier correctement sourcée et un lien Google Maps, au lieu du contenu embarqué.
+
+## Contrôles historiques du 17 novembre 2026
+
 Date : 17 novembre 2026.
 
 | Contrôle | Résultat |

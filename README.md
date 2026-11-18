@@ -17,7 +17,7 @@ Présenter dans un portfolio une base de site de restaurant claire, accessible e
 - Neuf plats, trois par pays, avec descriptions et prix fictifs en FCFA.
 - Navigation toujours visible ; bouton du futur menu mobile désactivé. Après le CSS, `script.js` sera chargé avec `defer` et gérera ouverture, fermeture, Échap et clic sur un lien.
 - Métadonnées, canonical, Open Graph et JSON-LD `Restaurant` correspondant au contenu visible et signalant la démonstration.
-- Coordonnées, horaires et numéro **fictifs**. Les liens `tel:` et `wa.me` illustrent leur syntaxe ; ne pas les utiliser pour contacter quelqu’un.
+- Coordonnées et horaires inventés. Un seul numéro volontairement invalide : `+000000000000`, affiché tel quel et utilisé dans `tel:` et le JSON-LD ; `wa.me/000000000000` reprend exactement les mêmes chiffres sans le `+`. Il sert à illustrer le parcours, pas à tester un véritable appel ou une conversation WhatsApp.
 - Carte Google Maps du quartier du Plateau, récupérée via « Partager / Intégrer une carte », avec titre, chargement différé et mention d’emplacement indicatif. Ce n’est pas la position d’un restaurant réel.
 
 ## Choix de structure
@@ -36,6 +36,8 @@ Photo d’ambiance de **Rachel Claire**, [Pexels, photo 4577715](https://www.pex
 Recadrage et conversion WebP à qualité 75 avec Pillow/libwebp : **Squoosh était inaccessible** lors de la réalisation. La photo d’accueil ne charge pas en lazy. Ses attributs HTML `width="240" height="160"` conservent le rapport 3:2 et un affichage compact sans CSS ; le futur CSS pourra l’agrandir de façon responsive. L’image Open Graph n’est pas téléchargée par la page elle-même.
 
 Favicon SVG original représentant un pont. Aucun service d’image distant n’est appelé au chargement de la photo.
+
+Vérification du 18 novembre 2026 : le fichier source est identique (SHA-256) à la photo téléchargée depuis `https://images.pexels.com/photos/4577715/pexels-photo-4577715.jpeg?auto=compress&cs=tinysrgb&w=1200`. Le fichier hero correspond exactement au recadrage 1200 × 800 de cette source. La fiche Pexels attribue bien la photo 4577715 à Rachel Claire.
 
 ## Polices
 
@@ -56,12 +58,16 @@ Puis ouvrir http://localhost:8000/ et arrêter le serveur avec Ctrl+C.
 GitHub Pages : Settings → Pages → Deploy from a branch → `main` → `/ (root)`.
 Tous les chemins de ressources locales sont relatifs sans slash initial. Les URL canonical, Open Graph et JSON-LD sont absolues pour décrire correctement la page publique.
 
+`og:locale` utilise `fr_FR`, exemple documenté dans le [protocole Open Graph](https://ogp.me/#optional). Le guide [Meta pour webmasters](https://developers.facebook.com/documentation/sharing/webmasters) renvoie à une liste de locales prises en charge ; cette liste n’a pas pu être consultée lors de la vérification. Nous retenons `fr_FR` sans prétendre que le protocole général interdit `fr_CG`. Cela ne change ni `lang="fr"` ni le pays `CG` de l’adresse.
+
+Le JSON-LD sert à démontrer la connaissance du format et mentionne la démonstration. **Aucun résultat enrichi n’est attendu pour ce restaurant fictif** : la validation technique ne fait pas de lui un commerce réel.
+
 ## Vérifications et suite
 
 Consulter [le rapport de vérification](docs/verification.md) pour les résultats réellement obtenus. Les scores Lighthouse définitifs et le test sur téléphone réel seront à reprendre après le CSS et le JavaScript. L’objectif 90/100 dans les quatre catégories n’est **pas un score acquis**.
 
 L’étude de cas de cette étape se trouve dans [docs/etude-de-cas.md](docs/etude-de-cas.md).
 
-Capture intermédiaire dans une fenêtre de 390 × 844 pixels, sans CSS (ce n’est pas un test sur téléphone physique) :
+Capture historique du 17 novembre 2026, avant les corrections éditoriales du 18 novembre, dans une fenêtre de 390 × 844 pixels, sans CSS (ce n’est pas un test sur téléphone physique) :
 
 ![Version HTML sans CSS au format mobile](docs/mobile-html.jpg)

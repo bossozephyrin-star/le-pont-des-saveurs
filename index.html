@@ -14,7 +14,7 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Photo d’ambiance illustrative : table dressée, bougies et plantes dans une salle de restaurant.">
-    <meta property="og:locale" content="fr_CG">
+    <meta property="og:locale" content="fr_FR">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <!-- Police préparée pour l’étape CSS ; elle n’est pas encore appliquée. -->
     <link rel="preload" href="fonts/lora-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
@@ -27,11 +27,11 @@
         "servesCuisine": ["Sénégalaise", "Ivoirienne", "Congolaise"],
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "12, rue des Saveurs (adresse fictive)",
+            "streetAddress": "12, rue des Saveurs",
             "addressLocality": "Brazzaville",
             "addressCountry": "CG"
         },
-        "telephone": "+242000000000",
+        "telephone": "+000000000000",
         "openingHoursSpecification": [
             {
                 "@type": "OpeningHoursSpecification",
@@ -56,7 +56,7 @@
 
     <header>
         <p><a href="#accueil">Le Pont des Saveurs</a></p>
-        <p>Site de démonstration : restaurant fictif.</p>
+        <p>Site de démonstration : restaurant fictif. La carte, les prix, l’adresse, les horaires et les coordonnées sont inventés ; aucune réservation réelle n’est possible.</p>
         <!-- Le menu reste visible. Ce bouton sera activé à l’étape JavaScript, après le CSS. -->
         <button type="button" aria-label="Ouvrir le menu de navigation"
                 aria-expanded="false" aria-controls="navigation-principale" disabled>Menu</button>
@@ -75,14 +75,13 @@
         <section id="accueil" aria-labelledby="titre-accueil">
             <h1 id="titre-accueil">Le Pont des Saveurs</h1>
             <p>Yassa, thieboudienne, attiéké : l’Afrique de l’Ouest dans votre assiette.</p>
-            <p>Une table imaginaire à Brazzaville, entre cuisines sénégalaise, ivoirienne et congolaise.</p>
-            <p><a href="https://wa.me/242000000000" aria-describedby="contact-demo">Réserver sur WhatsApp — démonstration</a></p>
-            <p id="contact-demo">Aucune réservation réelle : les liens d’appel et WhatsApp utilisent le numéro fictif +242 00 000 0000.</p>
+            <p>Une rencontre à Brazzaville entre cuisines sénégalaise, ivoirienne et congolaise.</p>
+            <p><a href="https://wa.me/000000000000" aria-describedby="numero-demo">Réserver sur WhatsApp</a></p>
             <figure>
                 <img src="assets/ambiance.webp" width="240" height="160"
                      alt="Table dressée à la lueur des bougies, entourée de plantes dans une salle de restaurant."
                      fetchpriority="high">
-                <figcaption>Photo d’ambiance illustrative ; elle ne représente pas Le Pont des Saveurs, qui est fictif.</figcaption>
+                <figcaption>Photo d’ambiance illustrative, sans lien avec un établissement Le Pont des Saveurs.</figcaption>
             </figure>
         </section>
 
@@ -95,17 +94,17 @@
                 <li>
                     <h4>Yassa poulet</h4>
                     <p>Poulet mariné au citron, oignons fondants et riz blanc.</p>
-                    <p>Prix fictif : <data value="4500">4 500 FCFA</data></p>
+                    <p><data value="4500">4 500 FCFA</data></p>
                 </li>
                 <li>
                     <h4>Thieboudienne</h4>
                     <p>Riz à la tomate, poisson et légumes mijotés.</p>
-                    <p>Prix fictif : <data value="5500">5 500 FCFA</data></p>
+                    <p><data value="5500">5 500 FCFA</data></p>
                 </li>
                 <li>
                     <h4>Mafé</h4>
                     <p>Bœuf mijoté dans une sauce à l’arachide, servi avec du riz.</p>
-                    <p>Prix fictif : <data value="5000">5 000 FCFA</data></p>
+                    <p><data value="5000">5 000 FCFA</data></p>
                 </li>
             </ul>
 
@@ -114,17 +113,17 @@
                 <li>
                     <h4>Attiéké poisson braisé</h4>
                     <p>Semoule de manioc, poisson braisé et garniture de tomates et d’oignons.</p>
-                    <p>Prix fictif : <data value="5000">5 000 FCFA</data></p>
+                    <p><data value="5000">5 000 FCFA</data></p>
                 </li>
                 <li>
                     <h4>Kédjenou de poulet</h4>
                     <p>Poulet mijoté à l’étouffée avec tomates, aubergines et épices.</p>
-                    <p>Prix fictif : <data value="4500">4 500 FCFA</data></p>
+                    <p><data value="4500">4 500 FCFA</data></p>
                 </li>
                 <li>
                     <h4>Alloco</h4>
                     <p>Bananes plantains mûres frites, accompagnées d’une sauce tomate pimentée.</p>
-                    <p>Prix fictif : <data value="2000">2 000 FCFA</data></p>
+                    <p><data value="2000">2 000 FCFA</data></p>
                 </li>
             </ul>
 
@@ -133,38 +132,37 @@
                 <li>
                     <h4>Poulet moambé</h4>
                     <p>Poulet mijoté dans une sauce à la pulpe de noix de palme, servi avec du riz.</p>
-                    <p>Prix fictif : <data value="5000">5 000 FCFA</data></p>
+                    <p><data value="5000">5 000 FCFA</data></p>
                 </li>
                 <li>
                     <h4>Saka-saka</h4>
                     <p>Feuilles de manioc pilées et mijotées, accompagnées de chikwangue.</p>
-                    <p>Prix fictif : <data value="3500">3 500 FCFA</data></p>
+                    <p><data value="3500">3 500 FCFA</data></p>
                 </li>
                 <li>
                     <h4>Liboke de poisson</h4>
                     <p>Poisson aux aromates cuit en papillote de feuilles, servi avec du manioc.</p>
-                    <p>Prix fictif : <data value="5500">5 500 FCFA</data></p>
+                    <p><data value="5500">5 500 FCFA</data></p>
                 </li>
             </ul>
         </section>
 
         <section id="a-propos" aria-labelledby="titre-a-propos">
             <h2 id="titre-a-propos">À propos</h2>
-            <p>Site de démonstration : restaurant fictif à Brazzaville, imaginé pour réunir les cuisines du Sénégal, de Côte d’Ivoire et du Congo.</p>
+            <p>Le Pont des Saveurs imagine une table à Brazzaville réunissant les cuisines du Sénégal, de Côte d’Ivoire et du Congo.</p>
             <p>Le « pont » symbolise la rencontre de ces trois traditions culinaires autour d’une même table.</p>
             <p>Ce projet de portfolio est créé par Adriano Bosso, étudiant en Systèmes d’Information et Génie Logiciel, pour présenter son travail de création de sites web pour restaurants.</p>
-            <p>Le restaurant, sa carte, ses prix, son adresse, son numéro de téléphone et ses horaires sont inventés : ce site ne représente aucun établissement en activité.</p>
         </section>
 
         <section id="infos-pratiques" aria-labelledby="titre-infos-pratiques">
             <h2 id="titre-infos-pratiques">Infos pratiques</h2>
-            <h3>Adresse fictive</h3>
+            <h3>Adresse</h3>
             <address>
                 Le Pont des Saveurs<br>
-                12, rue des Saveurs (adresse fictive)<br>
+                12, rue des Saveurs<br>
                 Brazzaville, République du Congo
             </address>
-            <h3>Horaires fictifs</h3>
+            <h3>Horaires</h3>
             <table>
                 <caption>Exemple d’horaires — heure locale de Brazzaville</caption>
                 <thead>
@@ -192,10 +190,10 @@
 
         <section id="contact" aria-labelledby="titre-contact">
             <h2 id="titre-contact">Contact</h2>
-            <p id="numero-demo">Numéro fictif de démonstration : +242 00 000 0000. Ne pas appeler ni envoyer de message ; aucune réservation n’est traitée.</p>
+            <p id="numero-demo">Numéro volontairement invalide : +000000000000. Ces liens illustrent le parcours de contact ; ils ne permettent ni appel ni échange WhatsApp.</p>
             <ul>
-                <li><a href="tel:+242000000000" aria-describedby="numero-demo">Appeler Le Pont des Saveurs — numéro fictif</a></li>
-                <li><a href="https://wa.me/242000000000" aria-describedby="numero-demo">Contacter Le Pont des Saveurs sur WhatsApp — démonstration</a></li>
+                <li><a href="tel:+000000000000" aria-describedby="numero-demo">Appeler Le Pont des Saveurs</a></li>
+                <li><a href="https://wa.me/000000000000" aria-describedby="numero-demo">Contacter Le Pont des Saveurs sur WhatsApp</a></li>
             </ul>
         </section>
     </main>
@@ -204,9 +202,7 @@
         <p><strong>Site de démonstration : restaurant fictif.</strong></p>
         <p>Projet de portfolio d’Adriano Bosso, étudiant en Systèmes d’Information et Génie Logiciel.</p>
         <p>Crédits photo : <a href="https://www.pexels.com/photo/interior-of-restaurant-with-served-table-4577715/">Rachel Claire sur Pexels</a> — photo d’ambiance recadrée et convertie en WebP, également utilisée pour l’aperçu de partage.</p>
-        <p>Police préparée : Lora, sous licence SIL Open Font License, hébergée localement et réservée à la future étape CSS.</p>
         <p><a href="#accueil">Retour à l’accueil</a></p>
     </footer>
 </body>
 </html>
-
