@@ -2,7 +2,7 @@
 
 Site vitrine de démonstration pour un **restaurant fictif à Brazzaville**, réalisé par Adriano Bosso, étudiant en Systèmes d’Information et Génie Logiciel.
 
-URL prévue sur GitHub Pages : https://bossozephyrin-star.github.io/le-pont-des-saveurs/
+Site publié sur GitHub Pages : https://bossozephyrin-star.github.io/le-pont-des-saveurs/
 
 ## Pourquoi ce projet ?
 
@@ -61,3 +61,7 @@ Tous les chemins de ressources locales sont relatifs sans slash initial. Les URL
 Consulter [le rapport de vérification](docs/verification.md) pour les résultats réellement obtenus. Les scores Lighthouse définitifs et le test sur téléphone réel seront à reprendre après le CSS et le JavaScript. L’objectif 90/100 dans les quatre catégories n’est **pas un score acquis**.
 
 L’étude de cas de cette étape se trouve dans [docs/etude-de-cas.md](docs/etude-de-cas.md).
+
+Capture intermédiaire dans une fenêtre de 390 × 844 pixels, sans CSS (ce n’est pas un test sur téléphone physique) :
+
+![Version HTML sans CSS au format mobile](docs/mobile-html.jpg)
