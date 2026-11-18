@@ -1,6 +1,16 @@
-# Vérifications — étape HTML sans CSS
+# Vérifications du projet
 
-## Corrections du 18 novembre 2026
+## Préparation de la publication HTML et CSS — 18 novembre 2026
+
+- Structure vérifiée : un `main`, un `h1`, cinq sections et neuf plats ; identifiants uniques, ancres et références ARIA cohérentes.
+- Douze ressources locales référencées par le HTML et le CSS présentes, chemins relatifs, signatures WOFF2 des deux polices correctes.
+- Huit images HTML vérifiées : attributs `width` et `height` égaux aux dimensions réelles et textes alternatifs présents. Les sept photos de plats sont en WebP, chargées en lazy, chacune sous 56 Ko.
+- JSON-LD analysé sans erreur de syntaxe ; description de démonstration et numéro invalide cohérents avec la page.
+- `git diff --check` sans erreur de blancs.
+- Publication de la mise en forme mobile et des photos Wikimedia avec leurs crédits. La nouvelle sélection visuelle reste documentée par des liens, en attente des autorisations de réutilisation.
+- Les validations W3C et Google ci-dessous concernent les versions HTML précédentes. Aucun nouveau score Lighthouse ni test sur téléphone physique n’est revendiqué pour cette publication.
+
+## Historique : corrections HTML du 18 novembre 2026
 
 - Numéro volontairement invalide `+000000000000` identique dans le texte, le lien `tel:` et le JSON-LD. Les deux liens WhatsApp utilisent les mêmes chiffres, sans le `+` : `000000000000`.
 - Mentions de démonstration regroupées dans l’en-tête et le footer ; prix affichés sans neuf répétitions de « Prix fictif ». Note de chantier sur la police retirée du footer, informations conservées dans le README.

@@ -1,0 +1,394 @@
+@font-face {
+  font-family: "Lora";
+  src: url("fonts/lora-latin-regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("fonts/lora-latin-700.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  /* Couleurs prélevées dans le JPEG de référence (736 × 1308 px). */
+  --couleur-fond: #FEFEFE; /* Pixel (0, 100). */
+  --couleur-texte: #585858; /* Pixel (159, 284) ; contraste sur fond : 7,05:1. */
+  --couleur-secondaire: #233407; /* Pixel (451, 708). */
+  --couleur-accent-decoratif: #E65804; /* Décoration et grands titres : contraste 3,61:1 sur le fond. */
+
+  /* Orange assombri : contraste WebAIM avec du blanc (#FFFFFF) : 5,09:1. */
+  --couleur-accent: #BE4803;
+  --couleur-fond-doux: #F6F4EE;
+  --couleur-sur-accent: #FFFFFF;
+  --couleur-bordure: #DEDFD8;
+
+  --espace-xs: 0.5rem;
+  --espace-s: 0.75rem;
+  --espace-m: 1rem;
+  --espace-l: 1.5rem;
+  --espace-xl: 2rem;
+  --espace-xxl: 3rem;
+  --largeur-contenu: 70rem;
+  --rayon-carte: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+figure {
+  margin: 0;
+}
+
+body {
+  font-family: "Lora", Georgia, serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--couleur-texte);
+  background-color: var(--couleur-fond);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+section {
+  max-width: var(--largeur-contenu);
+  margin-inline: auto;
+  padding: var(--espace-xxl) var(--espace-m);
+}
+
+h2 {
+  margin-bottom: var(--espace-l);
+  font-size: clamp(1.75rem, 1.25rem + 2vw, 2.5rem);
+  line-height: 1.2;
+  color: var(--couleur-secondaire);
+}
+
+p {
+  max-width: 65ch;
+}
+
+/* Le lien reste accessible au clavier, même hors de l’écran. */
+.lien-evitement {
+  position: absolute;
+  top: 0;
+  left: -10000px;
+  z-index: 10;
+  max-width: calc(100% - 2 * var(--espace-m));
+  padding: var(--espace-s) var(--espace-m);
+  color: var(--couleur-secondaire);
+  background-color: var(--couleur-fond);
+}
+
+.lien-evitement:focus {
+  top: var(--espace-m);
+  left: var(--espace-m);
+}
+
+:focus-visible {
+  outline: 3px solid var(--couleur-secondaire);
+  outline-offset: 4px;
+}
+
+/* Header : les éléments et les liens peuvent passer à la ligne. */
+body > header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--espace-m);
+  max-width: var(--largeur-contenu);
+  margin-inline: auto;
+  padding: var(--espace-l) var(--espace-m);
+}
+
+.nom-restaurant {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.mention-demo {
+  flex-basis: 100%;
+  max-width: none;
+  padding: var(--espace-s);
+  font-size: 0.875rem;
+  background-color: var(--couleur-fond-doux);
+  border-radius: 0.5rem;
+}
+
+#navigation-principale ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espace-xs) var(--espace-m);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body > header a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--couleur-secondaire);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.25em;
+}
+
+body > header a:hover {
+  color: var(--couleur-accent);
+  text-decoration-thickness: 2px;
+}
+
+body > header button[aria-controls="navigation-principale"] {
+  display: none;
+}
+
+/* Accueil : texte, liens puis photo, toujours dans une seule colonne. */
+#accueil {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espace-l);
+}
+
+#titre-accueil {
+  font-size: clamp(2rem, 1.5rem + 2.5vw, 3.2rem);
+  line-height: 1.15;
+  color: var(--couleur-secondaire);
+}
+
+:is(h1, h2) .accent {
+  color: var(--couleur-accent-decoratif);
+  font-style: italic;
+}
+
+.actions-accueil {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espace-s);
+}
+
+.bouton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: var(--espace-s) var(--espace-l);
+  border: 2px solid var(--couleur-accent);
+  border-radius: 999px;
+  color: var(--couleur-sur-accent);
+  background-color: var(--couleur-accent);
+  text-align: center;
+  text-decoration: none;
+}
+
+.bouton-contour {
+  color: var(--couleur-accent);
+  background-color: transparent;
+}
+
+.bouton:hover {
+  border-color: var(--couleur-secondaire);
+  color: var(--couleur-sur-accent);
+  background-color: var(--couleur-secondaire);
+}
+
+#accueil img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 1.25rem;
+}
+
+#accueil figcaption {
+  margin-top: var(--espace-s);
+  font-size: 0.875rem;
+}
+
+/* La carte : une colonne, avec les mêmes espacements pour chaque pays. */
+#carte h3,
+#infos-pratiques h3 {
+  margin-top: var(--espace-xl);
+  margin-bottom: var(--espace-m);
+  font-size: 1.25rem;
+  color: var(--couleur-secondaire);
+}
+
+#carte ul {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--espace-l);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#carte li {
+  padding: var(--espace-l);
+  background-color: var(--couleur-sur-accent);
+  border-radius: var(--rayon-carte);
+  box-shadow: 0 2px 12px rgb(35 52 7 / 8%);
+}
+
+#carte h4 {
+  margin-bottom: var(--espace-s);
+  font-size: 1.125rem;
+  color: var(--couleur-secondaire);
+}
+
+#carte img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: var(--espace-m);
+  border-radius: var(--rayon-carte);
+}
+
+#carte li p + p {
+  margin-top: var(--espace-m);
+}
+
+#carte data {
+  color: var(--couleur-accent);
+  font-weight: 700;
+}
+
+#a-propos p + p {
+  margin-top: var(--espace-m);
+}
+
+/* Infos pratiques : coordonnées, horaires et carte adaptables. */
+#infos-pratiques address {
+  font-style: normal;
+}
+
+#infos-pratiques table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+#infos-pratiques caption {
+  padding-bottom: var(--espace-s);
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+#infos-pratiques th,
+#infos-pratiques td {
+  padding: var(--espace-s);
+  border-bottom: 1px solid var(--couleur-bordure);
+}
+
+#infos-pratiques th {
+  color: var(--couleur-secondaire);
+}
+
+#infos-pratiques iframe {
+  display: block;
+  width: 100%;
+  height: 300px;
+  margin-block: var(--espace-m);
+  border: 0;
+  border-radius: var(--rayon-carte);
+}
+
+#infos-pratiques a {
+  color: var(--couleur-accent);
+  text-underline-offset: 0.25em;
+}
+
+#infos-pratiques a:hover {
+  color: var(--couleur-secondaire);
+}
+
+/* Contact : les liens utilisent la classe .bouton de l’accueil. */
+#contact ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espace-m);
+  margin-top: var(--espace-l);
+  padding: 0;
+  list-style: none;
+}
+
+#contact li {
+  max-width: 100%;
+}
+
+#contact .bouton {
+  max-width: 100%;
+}
+
+/* Pied de page : contraste clair sur vert, y compris au focus. */
+body > footer {
+  padding: var(--espace-xxl) var(--espace-m);
+  color: var(--couleur-sur-accent);
+  background-color: var(--couleur-secondaire);
+}
+
+body > footer p {
+  margin-inline: auto;
+}
+
+body > footer p + p {
+  margin-top: var(--espace-m);
+}
+
+body > footer a {
+  color: var(--couleur-sur-accent);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+body > footer a:hover {
+  text-decoration-thickness: 2px;
+}
+
+body > footer a:focus-visible {
+  outline-color: var(--couleur-sur-accent);
+}
+
+.credits-photos {
+  max-width: 65ch;
+  margin: var(--espace-m) auto;
+}
+
+.credits-photos summary {
+  min-height: 44px;
+  padding-block: var(--espace-s);
+  cursor: pointer;
+}
+
+.credits-photos summary:focus-visible {
+  outline-color: var(--couleur-sur-accent);
+}
+
+.credits-photos ul {
+  margin-top: var(--espace-m);
+  padding-left: var(--espace-l);
+}
+
+.credits-photos li + li {
+  margin-top: var(--espace-s);
+}

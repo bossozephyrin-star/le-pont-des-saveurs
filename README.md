@@ -8,9 +8,9 @@ Site publié sur GitHub Pages : https://bossozephyrin-star.github.io/le-pont-des
 
 Présenter dans un portfolio une base de site de restaurant claire, accessible et légère, réunissant les cuisines du Sénégal, de Côte d’Ivoire et du Congo. Aucun avis, récompense, chiffre commercial ou établissement réel n’est revendiqué.
 
-## État actuel : HTML uniquement
+## État actuel : HTML et CSS mobile d’abord
 
-À la demande d’Adriano, **le CSS viendra plus tard**. Il n’y a ni feuille de style, ni style inline, ni JavaScript interactif. Le seul script est un bloc de données JSON-LD non exécutable. Le navigateur utilise son affichage natif.
+Le site comprend les fondations CSS, l’en-tête, l’accueil et les cinq sections en une colonne. Les images de plats sont hébergées localement. Le JavaScript du menu viendra après le CSS ; le seul script actuel est un bloc de données JSON-LD non exécutable.
 
 - Cinq sections, un seul `main`, un seul `h1`, puis des titres hiérarchisés.
 - Lien d’évitement, ancres, listes de plats, coordonnées dans `address` et horaires dans `table` avec `caption` et en-têtes `scope`.
@@ -26,14 +26,16 @@ Les plats sont des **listes `ul`**, car ils constituent des éléments d’une m
 
 ## Images et crédits
 
-Photo d’ambiance de **Rachel Claire**, [Pexels, photo 4577715](https://www.pexels.com/photo/interior-of-restaurant-with-served-table-4577715/), utilisée selon la [licence Pexels](https://www.pexels.com/license/). Elle est explicitement illustrative et ne représente pas le restaurant fictif. Aucune photo de plat n’a été retenue faute de correspondance fiable trouvée sur Pexels.
+Photo d’ambiance de **Rachel Claire**, [Pexels, photo 4577715](https://www.pexels.com/photo/interior-of-restaurant-with-served-table-4577715/), utilisée selon la [licence Pexels](https://www.pexels.com/license/). Elle est explicitement illustrative et ne représente pas le restaurant fictif.
+
+Sept photos de plats ont été sélectionnées sur Wikimedia Commons : yassa poulet, thieboudienne, mafé, kédjenou, alloco, poulet moambé et liboke. Les auteurs, liens vers les fiches sources, licences et transformations figurent dans le pied de page et dans [les crédits détaillés](docs/credits-photos.md). L’attiéké poisson braisé et le saka-saka restent sans photo faute de cliché retenu suffisamment adapté. Aucune image de Pinterest ou Google Images n’est utilisée.
 
 | Fichier | Dimensions du fichier | Taille |
 | --- | --- | --- |
 | `assets/ambiance.webp` | 1200 × 800 | 68 570 octets |
 | `assets/og-image.webp` | 1200 × 630 | 52 588 octets |
 
-Recadrage et conversion WebP à qualité 75 avec Pillow/libwebp : **Squoosh était inaccessible** lors de la réalisation. La photo d’accueil ne charge pas en lazy. Ses attributs HTML `width="240" height="160"` conservent le rapport 3:2 et un affichage compact sans CSS ; le futur CSS pourra l’agrandir de façon responsive. L’image Open Graph n’est pas téléchargée par la page elle-même.
+Recadrage et conversion WebP à qualité 75 avec Pillow/libwebp : **Squoosh était inaccessible** lors de la réalisation initiale. La photo d’accueil ne charge pas en lazy ; ses attributs `width="1200" height="800"` correspondent au fichier. Les photos de plats font 800 px de large et moins de 56 Ko chacune, avec `loading="lazy"`, un texte alternatif et leurs dimensions réelles. Le CSS conserve les proportions avec `max-width: 100%` et `height: auto`. L’image Open Graph n’est pas téléchargée par la page elle-même.
 
 Favicon SVG original représentant un pont. Aucun service d’image distant n’est appelé au chargement de la photo.
 
@@ -41,7 +43,7 @@ Vérification du 18 novembre 2026 : le fichier source est identique (SHA-256) à
 
 ## Polices
 
-Une famille préparée : **Lora**, latin, graisses 400 et 700 en WOFF2, téléchargée via [google-webfonts-helper](https://gwfh.mranftl.com/fonts/lora?subsets=latin). Licence dans `fonts/OFL-Lora.txt`. La graisse 400 est préchargée ; les déclarations `@font-face` avec `font-display: swap` seront ajoutées à l’étape CSS. Le navigateur peut donc signaler pour l’instant un preload inutilisé : c’est une conséquence de cette étape intermédiaire.
+Une famille : **Lora**, latin, graisses 400 et 700 en WOFF2, téléchargée via [google-webfonts-helper](https://gwfh.mranftl.com/fonts/lora?subsets=latin). Licence dans `fonts/OFL-Lora.txt`. La graisse 400 est préchargée ; les déclarations `@font-face` utilisent `font-display: swap`.
 
 ## Lancer localement
 
